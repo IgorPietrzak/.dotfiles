@@ -1,0 +1,30 @@
+# Specify the theme
+theme = "ayu_dark"
+
+# Key bindings for normal mode
+[keys.normal]
+"F" = ":format"
+"C-l" = [":sh latexmk -pdf"]
+"C-s" = [":write", ":format"]
+
+# Key bindings for insert mode
+[keys.insert]
+"C-s" = [":write", "normal_mode", ":format"]
+"C-l" = [":sh latexmk -f -pdf"]
+
+# Key bindings for select mode
+[keys.select]
+"C-s" = [":write", "normal_mode", ":format"]
+
+[editor.cursor-shape]
+normal = "block"   # Block cursor in normal mode
+insert = "underline"     # Bar cursor in insert mode
+select = "block" # Underline cursor in select mode
+
+[editor.lsp]
+display-messages = true
+
+[editor]
+color-modes = true
+
+
